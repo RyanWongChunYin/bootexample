@@ -33,7 +33,7 @@ public class ShipControllerWebIntegrationTest {
     int randomServerPort;
 	
 	//url pointed to the test environment
-	private String testUrl = "http://localhost:9090";
+	private String testUrl = "http://localhost:8181";
 	private RestTemplate restTemplate;
 	private ObjectMapper objectMapper;
 	@Before
@@ -44,14 +44,14 @@ public class ShipControllerWebIntegrationTest {
 	
 	@Test
 	public void Test_ListAll_is_called_api_and_status_is_200() {
-		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:9090/api/v1/shipwrecks", String.class);
+		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8181/api/v1/shipwrecks", String.class);
 		assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
 		
 	}
 	
 	@Test
 	public void Test_ListAll_api_has_not_missing_node() throws JsonProcessingException, IOException {
-		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:9090/api/v1/shipwrecks", String.class);
+		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8181/api/v1/shipwrecks", String.class);
 		JsonNode jsonNode = objectMapper.readTree(response.getBody());
 		
 		assertThat( jsonNode.isMissingNode(), is(false));
