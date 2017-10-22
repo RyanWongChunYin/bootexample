@@ -1,7 +1,6 @@
-/Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/config/PersistenceConfigurtion.java
 /Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/controller/ShipController.java
+/Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/ApplicationStartup.java
 /Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/model/Shipwreck.java
 /Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/App.java
-/Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/controller/ShipwreckStub.java
-/Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/repository/ShipwreckRepository.java
+/Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/config/DynamoDBConfig.java
 /Users/chunyinwong/Documents/java_workspace/das-boot/src/main/java/com/boot/controller/HomeController.java

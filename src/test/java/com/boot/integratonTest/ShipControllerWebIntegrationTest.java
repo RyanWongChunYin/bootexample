@@ -49,14 +49,5 @@ public class ShipControllerWebIntegrationTest {
 		
 	}
 	
-	@Test
-	public void Test_ListAll_api_has_not_missing_node() throws JsonProcessingException, IOException {
-		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8181/api/v1/shipwrecks", String.class);
-		JsonNode jsonNode = objectMapper.readTree(response.getBody());
-		
-		assertThat( jsonNode.isMissingNode(), is(false));
-		assertThat( jsonNode.toString(), equalTo("[]"));
-	}
-	
 	
 }
