@@ -37,12 +37,12 @@ public class ShipController {
 	}
 
 	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.GET)
-	public Shipwreck get(@PathVariable long id) {
+	public Shipwreck get(@PathVariable String id) {
 		return dynamoDBMapper.load(Shipwreck.class, id);
 	}
 
 	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.PUT)
-	public void update(@PathVariable long id, @RequestBody Shipwreck shipwreck) {
+	public void update(@PathVariable String id, @RequestBody Shipwreck shipwreck) {
 		Shipwreck oldShipwreck = dynamoDBMapper.load(Shipwreck.class, id);
 		BeanUtils.copyProperties(shipwreck, oldShipwreck);
 		dynamoDBMapper.save(shipwreck);
@@ -50,7 +50,7 @@ public class ShipController {
 
 	// can also return void/object
 	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable long id) {
+	public void delete(@PathVariable String id) {
 		Shipwreck shipwreck = dynamoDBMapper.load(Shipwreck.class, id);
 		dynamoDBMapper.delete(shipwreck);
 	}
